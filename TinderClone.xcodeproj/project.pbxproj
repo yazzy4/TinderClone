@@ -13,6 +13,7 @@
 		91619BEE28FEFBD900CCB186 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91619BEC28FEFBD900CCB186 /* LaunchScreen.storyboard */; };
 		91619BFD28FEFFE900CCB186 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91619BFC28FEFFE900CCB186 /* HomeController.swift */; };
 		91619BFF28FF132900CCB186 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91619BFE28FF132900CCB186 /* Extensions.swift */; };
+		91619C0128FF2BAE00CCB186 /* HomeNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91619C0028FF2BAE00CCB186 /* HomeNavigationStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		91619BEF28FEFBD900CCB186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91619BFC28FEFFE900CCB186 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		91619BFE28FF132900CCB186 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = ../../../../Downloads/Extensions.swift; sourceTree = "<group>"; };
+		91619C0028FF2BAE00CCB186 /* HomeNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		91619BFA28FEFF2C00CCB186 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				91619C0028FF2BAE00CCB186 /* HomeNavigationStack.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91619BE228FEFBD600CCB186 /* AppDelegate.swift in Sources */,
+				91619C0128FF2BAE00CCB186 /* HomeNavigationStack.swift in Sources */,
 				91619BE428FEFBD600CCB186 /* SceneDelegate.swift in Sources */,
 				91619BFD28FEFFE900CCB186 /* HomeController.swift in Sources */,
 				91619BFF28FF132900CCB186 /* Extensions.swift in Sources */,
