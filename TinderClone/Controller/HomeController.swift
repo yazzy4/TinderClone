@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeController.swift
 //  TinderClone
 //
 //  Created by Yaz Burrell on 10/18/22.
@@ -7,13 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class HomeController: UIViewController {
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-       
+        
+        view.backgroundColor = .red
     }
-
-
 }
-
