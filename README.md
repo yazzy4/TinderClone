@@ -1,7 +1,15 @@
-# TinderClone
+# Tinder Clone
 
-A practice in MVVM architecture, UI animations and Firebase 
+**Objective**
+Create a fully functional Tinder clone using MVVM architecture, swipe gestures and Firebase
 
-## Branches
+## Branches - UI
+
+### RootVC
+- Configure folders for MVVM 
+- Programmatically set up root vc 
+
+### HomeView
+- Set up nav bar icons and buttons 
 
 
