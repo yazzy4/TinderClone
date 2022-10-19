@@ -22,7 +22,7 @@ class BottomControlStackView: UIStackView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         heightAnchor.constraint(equalToConstant: 100).isActive = true
-        distribution = .fillEqually
+        distribution = .fillEqually 
         
         refreshButton.setImage(UIImage(named: "refresh_circle")?.withRenderingMode(.alwaysOriginal), for: .normal)
         dislikeButton.setImage(UIImage(named: "dismiss_circle")?.withRenderingMode(.alwaysOriginal), for: .normal)
