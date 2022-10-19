@@ -5,7 +5,7 @@ Create a fully functional Tinder clone using MVVM architecture, swipe gestures a
 
 ## Branches - UI
 
-### RootVC[
+### RootVC
 - Configure folders for MVVM 
 - Programmatically set up root vc 
 
