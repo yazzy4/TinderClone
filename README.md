@@ -11,5 +11,11 @@ Create a fully functional Tinder clone using MVVM architecture, swipe gestures a
 
 ### HomeView
 - Set up nav bar icons and buttons 
+- Set up action buttons below cardview
+
+## CardView
+- Create a stack or deck of images 
+- Populate first with default images 
+- Add pan gesture animation 
 
 
