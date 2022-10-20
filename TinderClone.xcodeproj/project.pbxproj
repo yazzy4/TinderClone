@@ -14,6 +14,8 @@
 		91619BFD28FEFFE900CCB186 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91619BFC28FEFFE900CCB186 /* HomeController.swift */; };
 		91619BFF28FF132900CCB186 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91619BFE28FF132900CCB186 /* Extensions.swift */; };
 		91619C0128FF2BAE00CCB186 /* HomeNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91619C0028FF2BAE00CCB186 /* HomeNavigationStack.swift */; };
+		91619C0328FF321400CCB186 /* BottomControlsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91619C0228FF321400CCB186 /* BottomControlsStackView.swift */; };
+		91F5D9D0290085F700A6843F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F5D9CF290085F700A6843F /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		91619BFC28FEFFE900CCB186 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		91619BFE28FF132900CCB186 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = ../../../../Downloads/Extensions.swift; sourceTree = "<group>"; };
 		91619C0028FF2BAE00CCB186 /* HomeNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationStack.swift; sourceTree = "<group>"; };
+		91619C0228FF321400CCB186 /* BottomControlsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControlsStackView.swift; sourceTree = "<group>"; };
+		91F5D9CF290085F700A6843F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				91619C0028FF2BAE00CCB186 /* HomeNavigationStack.swift */,
+				91619C0228FF321400CCB186 /* BottomControlsStackView.swift */,
+				91F5D9CF290085F700A6843F /* CardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +194,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91F5D9D0290085F700A6843F /* CardView.swift in Sources */,
+				91619C0328FF321400CCB186 /* BottomControlsStackView.swift in Sources */,
 				91619BE228FEFBD600CCB186 /* AppDelegate.swift in Sources */,
 				91619C0128FF2BAE00CCB186 /* HomeNavigationStack.swift in Sources */,
 				91619BE428FEFBD600CCB186 /* SceneDelegate.swift in Sources */,
