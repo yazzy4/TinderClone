@@ -48,7 +48,7 @@ class CardView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        print("DEBUG: Frame is initialized")
+        print("DEBUG: Frame is initializing")
         
         backgroundColor = .systemPurple
         layer.cornerRadius = 10
@@ -56,6 +56,8 @@ class CardView: UIView {
         
         addSubview(imageView)
         imageView.fillSuperview()
+        
+        configureGradientLayer()
         
         addSubview(infoLabel)
         infoLabel.anchor(left: leftAnchor, bottom:  bottomAnchor, right: rightAnchor, paddingLeft: 16, paddingBottom: 16, paddingRight: 16)
@@ -65,7 +67,7 @@ class CardView: UIView {
         infoButton.centerY(inView: infoLabel)
         infoButton.anchor(right: rightAnchor, paddingRight: 16)
         
-        configureGradientLayer()
+        
     }
     
     override func layoutSubviews() {
