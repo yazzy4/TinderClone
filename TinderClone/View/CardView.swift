@@ -12,6 +12,8 @@ class CardView: UIView {
     
     // MARK: - Properties
     
+    private let gradientLayer = CAGradientLayer()
+    
     private let imageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
@@ -60,9 +62,20 @@ class CardView: UIView {
         infoButton.setDimensions(height: 40, width: 40)
         infoButton.centerY(inView: infoLabel)
         infoButton.anchor(right: rightAnchor, paddingRight: 16)
+        
+        configureGradientLayer()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Helpers
+    
+    func configureGradientLayer() {
+        gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+        gradientLayer.locations = [0.5, 1.1]
+        layer.addSublayer(gradientLayer)
+        gradientLayer.frame = self.frame
     }
 }
