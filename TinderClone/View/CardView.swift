@@ -48,6 +48,8 @@ class CardView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        print("DEBUG: Frame is initialized")
+        
         backgroundColor = .systemPurple
         layer.cornerRadius = 10
         clipsToBounds = true
@@ -66,6 +68,12 @@ class CardView: UIView {
         configureGradientLayer()
     }
     
+    override func layoutSubviews() {
+        gradientLayer.frame = self.frame
+        
+        print("DEBUG: Acess to subview layer successful")
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -76,6 +84,6 @@ class CardView: UIView {
         gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
         gradientLayer.locations = [0.5, 1.1]
         layer.addSublayer(gradientLayer)
-        gradientLayer.frame = self.frame
+        
     }
 }
