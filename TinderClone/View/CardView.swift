@@ -12,6 +12,7 @@ class CardView: UIView {
     
     // MARK: - Properties
     
+    // class level to access in more than one place
     private let gradientLayer = CAGradientLayer()
     
     private let imageView: UIImageView = {
@@ -48,8 +49,6 @@ class CardView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        print("DEBUG: Frame is initializing")
-        
         backgroundColor = .systemPurple
         layer.cornerRadius = 10
         clipsToBounds = true
@@ -67,17 +66,30 @@ class CardView: UIView {
         infoButton.centerY(inView: infoLabel)
         infoButton.anchor(right: rightAnchor, paddingRight: 16)
         
+        confugureGestureRecognizer()
+        
         
     }
     
     override func layoutSubviews() {
         gradientLayer.frame = self.frame
-        
-        print("DEBUG: Acess to subview layer successful")
+ 
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Selectors
+    
+    @objc func handlePanGesture(sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: nil)
+        print("DEBUG: Location at translation x is:   \(translation.x)")
+        print("DEBUG: Location at translation y is:  \(translation.y)")
+    }
+    
+    @objc func handleChangePhoto(sender: UITapGestureRecognizer) {
+        print("DEBUG: Did tap photo")
     }
     
     // MARK: - Helpers
@@ -88,4 +100,13 @@ class CardView: UIView {
         layer.addSublayer(gradientLayer)
         
     }
+    
+    func confugureGestureRecognizer() {
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture))
+        addGestureRecognizer(pan)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleChangePhoto))
+        addGestureRecognizer(tap)
+    }
+    
 }
