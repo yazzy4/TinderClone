@@ -1,7 +1,7 @@
 # Tinder Clone
 
 **Objective**
-Create a fully functional Tinder clone using MVVM architecture, swipe gestures and Firebase
+- Create a fully functional Tinder clone using MVVM architecture, swipe gestures and Firebase
 
 ## Branches - UI
 
