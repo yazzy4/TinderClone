@@ -20,3 +20,4 @@
 - Pan gesture animation gesture animation for swiping
 
 
+**TODO: code snippet + pan animaition explainatation**
