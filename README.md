@@ -19,9 +19,6 @@
 - Gradient layer for name readability
 - Pan gesture animation gesture animation for swiping
 
-
-**TODO: code snippet + pan animaition explainatation**
-
 ## Features 
 
 **Pan Gesture**
@@ -36,3 +33,80 @@
         addGestureRecognizer(tap)
     }
 ```
+
+[Default states of UIPanGestureRecognizer]
+
+```swift
+
+switch sender.state {      
+        case .possible:
+            // N/A
+        case .began:
+            print("DEBUG: Pan began")
+        case .changed:
+            print("DEBUG: Pan changed")  
+        case .ended:
+            print("DEBUG: Pan ended")
+        case .cancelled:
+            // N/A
+        case .failed:
+            // N/A
+        default: break
+        }
+```
+
+[Chop the ones not needed]
+
+```swift
+    @objc func handlePanGesture(sender: UIPanGestureRecognizer) {
+
+        switch sender.state {
+        case .began:
+            print("DEBUG: pan began...")
+        case .changed:
+            print("DEBUG: Do something!")
+        case .ended:
+            print("DEBUG: pan ends and then reset")
+        default: break
+        }
+    }
+```
+[The **shudders** math that makes it possible]
+
+
+```swift
+            let translation = sender.translation(in: nil)
+            
+            let degrees: CGFloat = translation.x / 20
+            let angle = degrees * .pi / 100
+            let rotationalTransform = CGAffineTransform(rotationAngle: angle)
+            self.transform = rotationalTransform.translatedBy(x: translation.x, y: translation.y)
+```
+
+[This assign behavior to the change of card]
+
+
+```swift
+    @objc func handlePanGesture(sender: UIPanGestureRecognizer) {
+    
+     let translation = sender.translation(in: nil)
+
+        switch sender.state {
+        case .began:
+            print("DEBUG: pan began...")
+        case .changed:
+            print("DEBUG: Something is happening")
+            let degrees: CGFloat = translation.x / 20
+            let angle = degrees * .pi / 100
+            let rotationalTransform = CGAffineTransform(rotationAngle: angle)
+            self.transform = rotationalTransform.translatedBy(x: translation.x, y: translation.y)
+        case .ended:
+            print("DEBUG: pan ends and then reset")
+        default: break
+        }
+    }
+```
+
+[the card moves but it is pretty whacky looking]
+
+**TODO: Code cleanup and reset function**
