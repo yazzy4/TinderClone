@@ -25,3 +25,13 @@
 ## Features 
 
 **Pan Gesture**
+
+```swift
+    func confugureGestureRecognizer() {
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture))
+        addGestureRecognizer(pan)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleChangePhoto))
+        addGestureRecognizer(tap)
+    }
+```
