@@ -26,6 +26,7 @@
 
 **Pan Gesture**
 
+[Setting up pan gesture recognizer]
 ```swift
     func confugureGestureRecognizer() {
         let pan = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture))
