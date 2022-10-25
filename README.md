@@ -5,15 +5,15 @@
 
 ## Branches - UI
 
-### RootVC
+**RootVC**
 - Configure folders for MVVM 
 - Programmatically set up root vc 
 
-### HomeView
+**HomeView**
 - Set up nav bar icons and buttons 
 - Set up action buttons below cardview
 
-### CardView
+**CardView**
 - Create a stack or deck of images 
 - Populate first with default images 
 - Gradient layer for name readability
@@ -21,3 +21,7 @@
 
 
 **TODO: code snippet + pan animaition explainatation**
+
+## Features 
+
+**Pan Gesture**
