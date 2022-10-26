@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum SwipeDirection: Int {
+    case left = -1
+    case right = 1
+}
+
 
 class CardView: UIView {
     
@@ -83,9 +88,7 @@ class CardView: UIView {
     // MARK: - Selectors
     
     @objc func handlePanGesture(sender: UIPanGestureRecognizer) {
-
         switch sender.state {
-  
         case .began:
             print("DEBUG: pan began...")
         case .changed:
@@ -112,10 +115,27 @@ class CardView: UIView {
     }
     
     func resetCardPosition(sender: UIPanGestureRecognizer) {
+        // handles if user swipes more than 100 pixels either right or left
+        let direction: SwipeDirection = sender.translation(in: nil).x > 100 ? .right : .left
+        
+        // dismisses the card only if it has been swiped greated than 100 pixels
+        let shouldDismissCard = abs(sender.translation(in: nil).x) > 100
+        
         UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.1, options: .curveEaseOut, animations: {
-            self.transform = .identity
+            
+            if shouldDismissCard {
+                let xTranslation = CGFloat(direction.rawValue) * 1000
+                let offscreenTransform = self.transform.translatedBy(x: xTranslation, y: 0)
+                self.transform = offscreenTransform
+            } else {
+                // returns to orginal form
+                self.transform = .identity
+            }
+
         }) { _ in
-            print("DEBUG: Animation did complete")
+            if shouldDismissCard {
+                self.removeFromSuperview()
+            }
         }
     }
     
