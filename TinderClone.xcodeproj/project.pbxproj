@@ -12,9 +12,11 @@
 		91619BEB28FEFBD900CCB186 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91619BEA28FEFBD900CCB186 /* Assets.xcassets */; };
 		91619BEE28FEFBD900CCB186 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91619BEC28FEFBD900CCB186 /* LaunchScreen.storyboard */; };
 		91619BFD28FEFFE900CCB186 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91619BFC28FEFFE900CCB186 /* HomeController.swift */; };
-		91619BFF28FF132900CCB186 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91619BFE28FF132900CCB186 /* Extensions.swift */; };
 		91619C0128FF2BAE00CCB186 /* HomeNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91619C0028FF2BAE00CCB186 /* HomeNavigationStack.swift */; };
 		91619C0328FF321400CCB186 /* BottomControlsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91619C0228FF321400CCB186 /* BottomControlsStackView.swift */; };
+		9198B1632909B1AD00E5EABE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198B1622909B1AD00E5EABE /* User.swift */; };
+		9198B1652909B1D200E5EABE /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198B1642909B1D200E5EABE /* CardViewModel.swift */; };
+		9198B1672909B20E00E5EABE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198B1662909B20E00E5EABE /* Extensions.swift */; };
 		91F5D9D0290085F700A6843F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F5D9CF290085F700A6843F /* CardView.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,9 +28,11 @@
 		91619BED28FEFBD900CCB186 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91619BEF28FEFBD900CCB186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91619BFC28FEFFE900CCB186 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
-		91619BFE28FF132900CCB186 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = ../../../../Downloads/Extensions.swift; sourceTree = "<group>"; };
 		91619C0028FF2BAE00CCB186 /* HomeNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationStack.swift; sourceTree = "<group>"; };
 		91619C0228FF321400CCB186 /* BottomControlsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControlsStackView.swift; sourceTree = "<group>"; };
+		9198B1622909B1AD00E5EABE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9198B1642909B1D200E5EABE /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		9198B1662909B20E00E5EABE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		91F5D9CF290085F700A6843F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,12 +66,12 @@
 		91619BE028FEFBD600CCB186 /* TinderClone */ = {
 			isa = PBXGroup;
 			children = (
-				91619BFB28FEFF4800CCB186 /* Model */,
+				9198B1682909B21F00E5EABE /* Model */,
 				91619BFA28FEFF2C00CCB186 /* View */,
-				91619BF928FEFF2A00CCB186 /* ViewModel */,
+				9198B1692909B22C00E5EABE /* ViewModel */,
 				91619BF828FEFF2800CCB186 /* Controller */,
 				91619BF728FEFF2500CCB186 /* API */,
-				91619BF528FEFF0D00CCB186 /* Utils */,
+				9198B16A2909B24600E5EABE /* Utils */,
 				91619BE128FEFBD600CCB186 /* AppDelegate.swift */,
 				91619BE328FEFBD600CCB186 /* SceneDelegate.swift */,
 				91619BEA28FEFBD900CCB186 /* Assets.xcassets */,
@@ -75,14 +79,6 @@
 				91619BEF28FEFBD900CCB186 /* Info.plist */,
 			);
 			path = TinderClone;
-			sourceTree = "<group>";
-		};
-		91619BF528FEFF0D00CCB186 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				91619BFE28FF132900CCB186 /* Extensions.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		91619BF728FEFF2500CCB186 /* API */ = {
@@ -100,13 +96,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		91619BF928FEFF2A00CCB186 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		91619BFA28FEFF2C00CCB186 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,11 +106,28 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		91619BFB28FEFF4800CCB186 /* Model */ = {
+		9198B1682909B21F00E5EABE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9198B1622909B1AD00E5EABE /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9198B1692909B22C00E5EABE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9198B1642909B1D200E5EABE /* CardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9198B16A2909B24600E5EABE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9198B1662909B20E00E5EABE /* Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,12 +201,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				91F5D9D0290085F700A6843F /* CardView.swift in Sources */,
+				9198B1672909B20E00E5EABE /* Extensions.swift in Sources */,
 				91619C0328FF321400CCB186 /* BottomControlsStackView.swift in Sources */,
 				91619BE228FEFBD600CCB186 /* AppDelegate.swift in Sources */,
 				91619C0128FF2BAE00CCB186 /* HomeNavigationStack.swift in Sources */,
+				9198B1632909B1AD00E5EABE /* User.swift in Sources */,
 				91619BE428FEFBD600CCB186 /* SceneDelegate.swift in Sources */,
 				91619BFD28FEFFE900CCB186 /* HomeController.swift in Sources */,
-				91619BFF28FF132900CCB186 /* Extensions.swift in Sources */,
+				9198B1652909B1D200E5EABE /* CardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
