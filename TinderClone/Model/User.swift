@@ -5,8 +5,10 @@
 //  Created by Yaz Burrell on 10/26/22.
 //
 
-import Foundation
+import UIKit
 
 struct User {
-    
+    var name: String
+    var age: Int
+    var images: [UIImage]
 }

@@ -5,4 +5,13 @@
 //  Created by Yaz Burrell on 10/26/22.
 //
 
-import Foundation
+import UIKit
+
+struct CardViewModel {
+    
+     let user: User
+    
+    init(user: User) {
+        self.user = user
+    }
+}

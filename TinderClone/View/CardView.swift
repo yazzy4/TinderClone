@@ -20,10 +20,11 @@ class CardView: UIView {
     // class level to access in more than one place
     private let gradientLayer = CAGradientLayer()
     
+    private let viewModel: CardViewModel
+    
     private let imageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
-        iv.image = UIImage(named: "jane1")
         return iv
     }()
     
@@ -51,8 +52,14 @@ class CardView: UIView {
     
     // MARK: - Lifecycle
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    // creates custom initializer from cardViewVm vs the default initializer given from UIView subclass
+    init(viewModel: CardViewModel) {
+        self.viewModel = viewModel
+        super.init(frame: .zero)
+        
+        confugureGestureRecognizer()
+        
+        imageView.image = viewModel.user.images.first
         
         backgroundColor = .systemPurple
         layer.cornerRadius = 10
@@ -71,7 +78,7 @@ class CardView: UIView {
         infoButton.centerY(inView: infoLabel)
         infoButton.anchor(right: rightAnchor, paddingRight: 16)
         
-        confugureGestureRecognizer()
+        
         
         
     }
