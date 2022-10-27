@@ -28,16 +28,11 @@ class CardView: UIView {
         return iv
     }()
     
-    private let infoLabel: UILabel = {
+    // have to make this lazy because not accessible outside of a method
+    private lazy var infoLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
-        
-        let attributedText = NSMutableAttributedString(string: "Jane Doe", attributes: [.font: UIFont.systemFont(ofSize: 32, weight: .heavy), .foregroundColor: UIColor.white])
-        
-        attributedText.append(NSAttributedString(string: "  20", attributes: [.font: UIFont.systemFont(ofSize: 24), .foregroundColor: UIColor.white]))
-        
-        label.attributedText = attributedText
-        
+        label.attributedText = viewModel.userInfoText
         return label
        
     }()
@@ -60,6 +55,9 @@ class CardView: UIView {
         confugureGestureRecognizer()
         
         imageView.image = viewModel.user.images.first
+    
+        // can also put attributed text here if using private let
+        // infolabel.attributedText = viewModel.userInfoText
         
         backgroundColor = .systemPurple
         layer.cornerRadius = 10
