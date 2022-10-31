@@ -105,7 +105,19 @@ class CardView: UIView {
     }
     
     @objc func handleChangePhoto(sender: UITapGestureRecognizer) {
+        // show next and show previous from cardvm go here
+        let location =  sender.location(in: nil).x
+        let shouldShowNextPhoto = location > self.frame.width / 2
         
+        if shouldShowNextPhoto {
+            viewModel.showNextPhoto()
+        } else {
+            viewModel.showPreviousPhoto()
+        }
+        
+        print("DEBUG: Location is at \(location)")
+        print("DEBUG: Frame threshold value is at \(self.frame.width / 2)")
+        print("DEBUG: Should show next photo is \(shouldShowNextPhoto)")
     }
     
     // MARK: - Helpers
