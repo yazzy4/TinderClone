@@ -16,8 +16,7 @@ enum SwipeDirection: Int {
 class CardView: UIView {
     
     // MARK: - Properties
-    
-    // class level to access in more than one place
+
     private let gradientLayer = CAGradientLayer()
     
     private let viewModel: CardViewModel
@@ -26,9 +25,9 @@ class CardView: UIView {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
         return iv
+        
     }()
     
-    // have to make this lazy because not accessible outside of a method
     private lazy var infoLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
@@ -37,17 +36,16 @@ class CardView: UIView {
        
     }()
     
-    // always original keeps white color for button
     private lazy var infoButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(named: "info_icon")?.withRenderingMode(.alwaysOriginal), for: .normal)
         return button
+        
     }()
     
     
     // MARK: - Lifecycle
-    
-    // creates custom initializer from cardViewVm vs the default initializer given from UIView subclass
+
     init(viewModel: CardViewModel) {
         self.viewModel = viewModel
         super.init(frame: .zero)
@@ -55,10 +53,7 @@ class CardView: UIView {
         confugureGestureRecognizer()
         
         imageView.image = viewModel.user.images.first
-    
-        // can also put attributed text here if using private let
-        // infolabel.attributedText = viewModel.userInfoText
-        
+
         backgroundColor = .systemPurple
         layer.cornerRadius = 10
         clipsToBounds = true
@@ -75,9 +70,6 @@ class CardView: UIView {
         infoButton.setDimensions(height: 40, width: 40)
         infoButton.centerY(inView: infoLabel)
         infoButton.anchor(right: rightAnchor, paddingRight: 16)
-        
-        
-        
         
     }
     
@@ -105,7 +97,6 @@ class CardView: UIView {
     }
     
     @objc func handleChangePhoto(sender: UITapGestureRecognizer) {
-        // show next and show previous from cardvm go here
         let location =  sender.location(in: nil).x
         let shouldShowNextPhoto = location > self.frame.width / 2
         
@@ -114,7 +105,6 @@ class CardView: UIView {
         } else {
             viewModel.showPreviousPhoto()
         }
-        
         imageView.image = viewModel.imageCollection
     }
     
@@ -130,10 +120,8 @@ class CardView: UIView {
     }
     
     func resetCardPosition(sender: UIPanGestureRecognizer) {
-        // handles if user swipes more than 100 pixels either right or left
         let direction: SwipeDirection = sender.translation(in: nil).x > 100 ? .right : .left
-        
-        // dismisses the card only if it has been swiped greated than 100 pixels
+
         let shouldDismissCard = abs(sender.translation(in: nil).x) > 100
         
         UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.1, options: .curveEaseOut, animations: {
@@ -143,7 +131,6 @@ class CardView: UIView {
                 let offscreenTransform = self.transform.translatedBy(x: xTranslation, y: 0)
                 self.transform = offscreenTransform
             } else {
-                // returns to orginal form
                 self.transform = .identity
             }
 

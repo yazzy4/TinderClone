@@ -7,7 +7,6 @@
 
 import UIKit
 
-// convert from a struct to class because view properties need to be modified
 class CardViewModel {
     
     let user: User
@@ -28,11 +27,9 @@ class CardViewModel {
     }
     
     func showNextPhoto() {
-        print("DEBUG: Current image at index \(imageIndex)")
         guard imageIndex < user.images.count - 1 else { return }
         
         imageIndex += 1
-        print("DEBUG: Can't access image at index \(imageIndex)")
         self.imageCollection = user.images[imageIndex]
     
     }

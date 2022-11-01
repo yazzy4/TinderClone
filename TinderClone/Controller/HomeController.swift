@@ -18,6 +18,7 @@ class HomeController: UIViewController {
         view.backgroundColor = .systemPink
         view.layer.cornerRadius = 5
         return view
+        
     }()
     
     // MARK: - Lifecycle
@@ -32,12 +33,9 @@ class HomeController: UIViewController {
     // MARK: - Helpers
     
     func configureCards() {
-        
-        // configurate view for cards in view model
         let user1 = User(name: "Jane Doe", age: 22, images: [UIImage(imageLiteralResourceName: "jane1"), UIImage(imageLiteralResourceName: "jane2"), UIImage(imageLiteralResourceName: "jane3")])
         let user2 = User(name: "Kelly", age: 26, images: [UIImage(imageLiteralResourceName: "kelly1"), UIImage(imageLiteralResourceName: "kelly2"), UIImage(imageLiteralResourceName: "kelly3")])
         
-        // test users
         let cardView1 = CardView(viewModel: CardViewModel(user: user1))
         let cardView2 = CardView(viewModel: CardViewModel(user: user2))
         
@@ -46,6 +44,7 @@ class HomeController: UIViewController {
         
         cardView1.fillSuperview()
         cardView2.fillSuperview()
+        
     }
     
     func configureUI() {
