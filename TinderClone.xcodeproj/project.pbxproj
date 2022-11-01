@@ -14,6 +14,8 @@
 		91619BFD28FEFFE900CCB186 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91619BFC28FEFFE900CCB186 /* HomeController.swift */; };
 		91619C0128FF2BAE00CCB186 /* HomeNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91619C0028FF2BAE00CCB186 /* HomeNavigationStack.swift */; };
 		91619C0328FF321400CCB186 /* BottomControlsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91619C0228FF321400CCB186 /* BottomControlsStackView.swift */; };
+		91975F2D2911870000B5A15B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91975F2C2911870000B5A15B /* LoginController.swift */; };
+		91975F302911874D00B5A15B /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91975F2F2911874D00B5A15B /* RegistrationController.swift */; };
 		9198B1632909B1AD00E5EABE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198B1622909B1AD00E5EABE /* User.swift */; };
 		9198B1652909B1D200E5EABE /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198B1642909B1D200E5EABE /* CardViewModel.swift */; };
 		9198B1672909B20E00E5EABE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198B1662909B20E00E5EABE /* Extensions.swift */; };
@@ -30,6 +32,8 @@
 		91619BFC28FEFFE900CCB186 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		91619C0028FF2BAE00CCB186 /* HomeNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationStack.swift; sourceTree = "<group>"; };
 		91619C0228FF321400CCB186 /* BottomControlsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControlsStackView.swift; sourceTree = "<group>"; };
+		91975F2C2911870000B5A15B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		91975F2F2911874D00B5A15B /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		9198B1622909B1AD00E5EABE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9198B1642909B1D200E5EABE /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		9198B1662909B20E00E5EABE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				91619BFC28FEFFE900CCB186 /* HomeController.swift */,
+				91975F2E2911872700B5A15B /* Authentication */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -104,6 +109,15 @@
 				91F5D9CF290085F700A6843F /* CardView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		91975F2E2911872700B5A15B /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				91975F2C2911870000B5A15B /* LoginController.swift */,
+				91975F2F2911874D00B5A15B /* RegistrationController.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		9198B1682909B21F00E5EABE /* Model */ = {
@@ -206,9 +220,11 @@
 				91619BE228FEFBD600CCB186 /* AppDelegate.swift in Sources */,
 				91619C0128FF2BAE00CCB186 /* HomeNavigationStack.swift in Sources */,
 				9198B1632909B1AD00E5EABE /* User.swift in Sources */,
+				91975F302911874D00B5A15B /* RegistrationController.swift in Sources */,
 				91619BE428FEFBD600CCB186 /* SceneDelegate.swift in Sources */,
 				91619BFD28FEFFE900CCB186 /* HomeController.swift in Sources */,
 				9198B1652909B1D200E5EABE /* CardViewModel.swift in Sources */,
+				91975F2D2911870000B5A15B /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
