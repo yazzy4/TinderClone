@@ -19,7 +19,7 @@
 - Gradient layer for name readability
 - Pan gesture animation gesture animation for swiping
 
-**CardViewMode & User Model**
+**CardView View Model & User Model**
 - Lays out functionality of reusable card view formatting
 - More than one image per card view selection
 - User model with attributed text 
