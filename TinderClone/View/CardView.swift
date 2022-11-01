@@ -115,9 +115,7 @@ class CardView: UIView {
             viewModel.showPreviousPhoto()
         }
         
-        print("DEBUG: Location is at \(location)")
-        print("DEBUG: Frame threshold value is at \(self.frame.width / 2)")
-        print("DEBUG: Should show next photo is \(shouldShowNextPhoto)")
+        imageView.image = viewModel.imageCollection
     }
     
     // MARK: - Helpers

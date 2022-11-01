@@ -7,12 +7,15 @@
 
 import UIKit
 
-struct CardViewModel {
+// convert from a struct to class because view properties need to be modified
+class CardViewModel {
     
     let user: User
     
     let userInfoText: NSAttributedString
     private var imageIndex = 0
+    
+    var imageCollection: UIImage?
     
     init(user: User) {
         self.user = user
@@ -25,10 +28,13 @@ struct CardViewModel {
     }
     
     func showNextPhoto() {
-        print("DEBUG: show next")
+        imageIndex += 1
+        self.imageCollection = user.images[imageIndex]
+    
     }
     
     func showPreviousPhoto() {
-        print("DEBUG: show previous")
+        imageIndex -= 1
+        self.imageCollection = user.images[imageIndex]
     }
 }
