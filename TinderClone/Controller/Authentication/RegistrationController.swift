@@ -15,5 +15,12 @@ class RegistrationController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        congfigureUI()
+    }
+    
+    // MARK: - Helpers
+    
+    func congfigureUI() {
+        view.backgroundColor = .systemBlue
     }
 }

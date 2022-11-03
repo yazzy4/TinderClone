@@ -20,6 +20,7 @@
 		9198B1652909B1D200E5EABE /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198B1642909B1D200E5EABE /* CardViewModel.swift */; };
 		9198B1672909B20E00E5EABE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198B1662909B20E00E5EABE /* Extensions.swift */; };
 		91E38E2D29141AC7000B4B83 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E38E2C29141AC7000B4B83 /* CustomTextField.swift */; };
+		91E38E2F29141F87000B4B83 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E38E2E29141F87000B4B83 /* AuthButton.swift */; };
 		91F5D9D0290085F700A6843F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F5D9CF290085F700A6843F /* CardView.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		9198B1642909B1D200E5EABE /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		9198B1662909B20E00E5EABE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		91E38E2C29141AC7000B4B83 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		91E38E2E29141F87000B4B83 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		91F5D9CF290085F700A6843F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +145,7 @@
 			children = (
 				9198B1662909B20E00E5EABE /* Extensions.swift */,
 				91E38E2C29141AC7000B4B83 /* CustomTextField.swift */,
+				91E38E2E29141F87000B4B83 /* AuthButton.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91F5D9D0290085F700A6843F /* CardView.swift in Sources */,
+				91E38E2F29141F87000B4B83 /* AuthButton.swift in Sources */,
 				9198B1672909B20E00E5EABE /* Extensions.swift in Sources */,
 				91619C0328FF321400CCB186 /* BottomControlsStackView.swift in Sources */,
 				91619BE228FEFBD600CCB186 /* AppDelegate.swift in Sources */,
