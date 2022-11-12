@@ -14,6 +14,7 @@
 		91619BFD28FEFFE900CCB186 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91619BFC28FEFFE900CCB186 /* HomeController.swift */; };
 		91619C0128FF2BAE00CCB186 /* HomeNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91619C0028FF2BAE00CCB186 /* HomeNavigationStack.swift */; };
 		91619C0328FF321400CCB186 /* BottomControlsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91619C0228FF321400CCB186 /* BottomControlsStackView.swift */; };
+		916B05F3292016E600E882C2 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916B05F2292016E600E882C2 /* AuthenticationViewModel.swift */; };
 		91975F2D2911870000B5A15B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91975F2C2911870000B5A15B /* LoginController.swift */; };
 		91975F302911874D00B5A15B /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91975F2F2911874D00B5A15B /* RegistrationController.swift */; };
 		9198B1632909B1AD00E5EABE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198B1622909B1AD00E5EABE /* User.swift */; };
@@ -34,6 +35,7 @@
 		91619BFC28FEFFE900CCB186 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		91619C0028FF2BAE00CCB186 /* HomeNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationStack.swift; sourceTree = "<group>"; };
 		91619C0228FF321400CCB186 /* BottomControlsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControlsStackView.swift; sourceTree = "<group>"; };
+		916B05F2292016E600E882C2 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		91975F2C2911870000B5A15B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		91975F2F2911874D00B5A15B /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		9198B1622909B1AD00E5EABE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				9198B1642909B1D200E5EABE /* CardViewModel.swift */,
+				916B05F2292016E600E882C2 /* AuthenticationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			files = (
 				91F5D9D0290085F700A6843F /* CardView.swift in Sources */,
 				91E38E2F29141F87000B4B83 /* AuthButton.swift in Sources */,
+				916B05F3292016E600E882C2 /* AuthenticationViewModel.swift in Sources */,
 				9198B1672909B20E00E5EABE /* Extensions.swift in Sources */,
 				91619C0328FF321400CCB186 /* BottomControlsStackView.swift in Sources */,
 				91619BE228FEFBD600CCB186 /* AppDelegate.swift in Sources */,

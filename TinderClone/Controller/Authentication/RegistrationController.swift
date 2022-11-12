@@ -16,6 +16,7 @@ class RegistrationController: UIViewController {
         button.tintColor = .white
         button.setImage(UIImage(named: "plus_photo"), for: .normal)
         button.addTarget(self, action: #selector(handleSelectPhoto), for: .touchUpInside)
+        button.clipsToBounds = true
         return button
     }()
     
@@ -97,6 +98,7 @@ extension RegistrationController: UIImagePickerControllerDelegate, UINavigationC
         selectPhotoButton.layer.borderColor = UIColor(white: 1, alpha: 0.7).cgColor
         selectPhotoButton.layer.borderWidth = 3
         selectPhotoButton.layer.cornerRadius = 10
+        selectPhotoButton.imageView?.contentMode = .scaleAspectFill
         
         dismiss(animated: true, completion: nil)
     }
