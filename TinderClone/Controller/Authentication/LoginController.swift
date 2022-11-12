@@ -10,6 +10,8 @@ import UIKit
 class LoginController: UIViewController {
     // MARK: - Properties
     
+    var viewModel = LoginViewModel()
+    
     private let iconImageView: UIImageView = {
         let iv = UIImageView()
         iv.image = UIImage(named: "app_icon")?.withRenderingMode(.alwaysTemplate)
@@ -32,7 +34,7 @@ class LoginController: UIViewController {
         
         attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: [.foregroundColor: UIColor.white, .font: UIFont.boldSystemFont(ofSize: 17)]))
         button.setAttributedTitle(attributedTitle, for: .normal)
-        button.addTarget(self, action: #selector(handleShowRegistration), for: .touchUpInside)
+        button.addTarget(LoginController.self, action: #selector(handleShowRegistration), for: .touchUpInside)
         return button
     }()
     
@@ -41,9 +43,20 @@ class LoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        configureTextFieldObservers()
     }
     
     // MARK: - Actions
+    
+    @objc func textDidChange(_ sender: UITextField) {
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        } else {
+            viewModel.password = sender.text
+        }
+        // values for both email and pw must have text in order for the form to be valid
+        print("DEBUG: Form is valid \(viewModel.formIsValid)")
+    }
     
     @objc func handleLogin() {
         print("DEBUG: Did press login")
@@ -53,7 +66,7 @@ class LoginController: UIViewController {
         navigationController?.pushViewController(RegistrationController(), animated: true)
         print("DEBUG: Did segue to registration")
     }
-    
+
     // MARK: - Helpers
     
     func configureUI() {
@@ -75,6 +88,11 @@ class LoginController: UIViewController {
         
         view.addSubview(goToRegistrationButton)
         goToRegistrationButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor,right: view.rightAnchor, paddingLeft: 32, paddingRight: 32)
+    }
+    
+    func configureTextFieldObservers() {
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
 
 }
