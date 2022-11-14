@@ -34,7 +34,7 @@ class LoginController: UIViewController {
         
         attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: [.foregroundColor: UIColor.white, .font: UIFont.boldSystemFont(ofSize: 17)]))
         button.setAttributedTitle(attributedTitle, for: .normal)
-        button.addTarget(LoginController.self, action: #selector(handleShowRegistration), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handleShowRegistration), for: .touchUpInside)
         return button
     }()
     
@@ -55,7 +55,7 @@ class LoginController: UIViewController {
             viewModel.password = sender.text
         }
         // values for both email and pw must have text in order for the form to be valid
-        print("DEBUG: Form is valid \(viewModel.formIsValid)")
+        checkForStatus()
     }
     
     @objc func handleLogin() {
@@ -68,6 +68,16 @@ class LoginController: UIViewController {
     }
 
     // MARK: - Helpers
+    
+    func checkForStatus() {
+        if viewModel.formIsValid {
+            authButton.isEnabled = true
+            authButton.backgroundColor = .systemPink
+        } else {
+            authButton.isEnabled = false
+            authButton.backgroundColor = UIColor(hex: "#FF655Bff")
+        }
+    }
     
     func configureUI() {
         navigationController?.navigationBar.isHidden = true

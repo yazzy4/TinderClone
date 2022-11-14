@@ -11,6 +11,8 @@ import UIKit
 class RegistrationController: UIViewController {
     // MARK: - Properties
     
+    private var viewModel = RegistrationViewModel()
+    
     private let selectPhotoButton: UIButton = {
         let button = UIButton(type: .system)
         button.tintColor = .white
@@ -45,9 +47,21 @@ class RegistrationController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         congfigureUI()
+        configureTextFieldObservers()
     }
     
     // MARK: - Actions
+    
+    @objc func textDidChange(_ sender: UITextField) {
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        } else if sender == passwordTextField {
+            viewModel.password = sender.text
+        } else {
+            viewModel.fullname = sender.text
+        }
+       checkForStatus()
+    }
     
     @objc func handleSelectPhoto() {
         let picker = UIImagePickerController()
@@ -65,6 +79,16 @@ class RegistrationController: UIViewController {
     }
     
     // MARK: - Helpers
+    
+    func checkForStatus() {
+        if viewModel.formIsValid {
+            authButton.isEnabled = true
+            authButton.backgroundColor = .systemPink
+        } else {
+            authButton.isEnabled = false
+            authButton.backgroundColor = UIColor(hex: "#FF655Bff")
+        }
+    }
     
     func congfigureUI() {
         configureGradientLayer()
@@ -85,6 +109,12 @@ class RegistrationController: UIViewController {
         view.addSubview(goToLoginButton)
         goToLoginButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor,right: view.rightAnchor, paddingLeft: 32, paddingRight: 32)
         
+    }
+    
+    func configureTextFieldObservers() {
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        fullnameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
 }
 
