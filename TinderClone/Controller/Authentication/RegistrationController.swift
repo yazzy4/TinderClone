@@ -25,6 +25,7 @@ class RegistrationController: UIViewController {
     private let emailTextField = CustomTextField(placeholder: "Email")
     private let fullnameTextField = CustomTextField(placeholder: "Full Name")
     private let passwordTextField = CustomTextField(placeholder: "Password", isSecureTextField: true)
+    private var profileImage: UIImage?
     
     private let authButton: AuthButton = {
         let button = AuthButton(title: "Sign Up", type: .system)
@@ -71,7 +72,14 @@ class RegistrationController: UIViewController {
     }
     
     @objc func handleRegistration() {
-        AuthService.registerUser()
+        guard let email = emailTextField.text else { return }
+        guard let fullname = fullnameTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        guard let profileImage = self.profileImage else { return }
+        
+        let credentials = AuthCredentials(email: email, password: password, fullname: fullname, profileImage: profileImage)
+        
+        AuthService.registerUser(withCredentials: credentials)
     }
     
     @objc func handleShowLogin() {
@@ -124,6 +132,7 @@ extension RegistrationController: UIImagePickerControllerDelegate, UINavigationC
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.originalImage] as? UIImage
+        profileImage = image
         selectPhotoButton.setImage(image?.withRenderingMode(.alwaysOriginal), for: .normal)
         selectPhotoButton.layer.borderColor = UIColor(white: 1, alpha: 0.7).cgColor
         selectPhotoButton.layer.borderWidth = 3

@@ -6,5 +6,28 @@
 //
 
 import Foundation
+import Firebase
+import UIKit
 
-// base service class for all API calls 
+// base service class for all API calls, used in multiple places
+
+struct Service {
+    
+    static func uploadImage(image: UIImage, completion: @escaping(String) -> Void) {
+        guard let imageData = image.jpegData(compressionQuality: 0.75) else { return }
+        let filename = NSUUID().uuidString
+        let ref = Storage.storage().reference(withPath: "/images/\(filename)")
+        
+        ref.putData(imageData, metadata: nil) { (metadata, error) in
+            if let error = error {
+                print("DEBUG: error uploading image \(error.localizedDescription)")
+                return
+            }
+            
+            ref.downloadURL { url, error in
+                guard let imageUrl = url?.absoluteString else { return }
+                completion(imageUrl)
+            }
+        }
+    }
+}
