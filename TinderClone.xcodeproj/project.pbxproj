@@ -20,6 +20,8 @@
 		9198B1632909B1AD00E5EABE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198B1622909B1AD00E5EABE /* User.swift */; };
 		9198B1652909B1D200E5EABE /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198B1642909B1D200E5EABE /* CardViewModel.swift */; };
 		9198B1672909B20E00E5EABE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9198B1662909B20E00E5EABE /* Extensions.swift */; };
+		91C3C88F29351542002598F7 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C3C88E29351542002598F7 /* AuthService.swift */; };
+		91C3C89129351552002598F7 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C3C89029351552002598F7 /* Service.swift */; };
 		91DDA4BF2922D7D3008DDB8F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91DDA4BE2922D7D3008DDB8F /* GoogleService-Info.plist */; };
 		91E38E2D29141AC7000B4B83 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E38E2C29141AC7000B4B83 /* CustomTextField.swift */; };
 		91E38E2F29141F87000B4B83 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E38E2E29141F87000B4B83 /* AuthButton.swift */; };
@@ -46,6 +48,8 @@
 		9198B1622909B1AD00E5EABE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9198B1642909B1D200E5EABE /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		9198B1662909B20E00E5EABE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		91C3C88E29351542002598F7 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		91C3C89029351552002598F7 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		91DDA4BE2922D7D3008DDB8F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		91E38E2C29141AC7000B4B83 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		91E38E2E29141F87000B4B83 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
@@ -70,7 +74,6 @@
 				2E6B71217A3D8D43CC9E4E9A /* Pods-TinderClone.debug.xcconfig */,
 				4FBAB88DE76868B87DCB790E /* Pods-TinderClone.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -114,6 +117,8 @@
 		91619BF728FEFF2500CCB186 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				91C3C88E29351542002598F7 /* AuthService.swift */,
+				91C3C89029351552002598F7 /* Service.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -305,9 +310,11 @@
 				91619C0128FF2BAE00CCB186 /* HomeNavigationStack.swift in Sources */,
 				9198B1632909B1AD00E5EABE /* User.swift in Sources */,
 				91975F302911874D00B5A15B /* RegistrationController.swift in Sources */,
+				91C3C89129351552002598F7 /* Service.swift in Sources */,
 				91619BE428FEFBD600CCB186 /* SceneDelegate.swift in Sources */,
 				91E38E2D29141AC7000B4B83 /* CustomTextField.swift in Sources */,
 				91619BFD28FEFFE900CCB186 /* HomeController.swift in Sources */,
+				91C3C88F29351542002598F7 /* AuthService.swift in Sources */,
 				9198B1652909B1D200E5EABE /* CardViewModel.swift in Sources */,
 				91975F2D2911870000B5A15B /* LoginController.swift in Sources */,
 			);

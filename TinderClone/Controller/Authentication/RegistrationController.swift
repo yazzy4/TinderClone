@@ -71,7 +71,7 @@ class RegistrationController: UIViewController {
     }
     
     @objc func handleRegistration() {
-        print("DEBUG: Handle registration here")
+        AuthService.registerUser()
     }
     
     @objc func handleShowLogin() {
