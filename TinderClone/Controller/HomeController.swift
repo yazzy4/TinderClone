@@ -29,7 +29,7 @@ class HomeController: UIViewController {
         checkIfUserIsLoggedIn()
         configureCards()
         configureUI()
-        logout()
+        //logout()
     }
     
     // MARK: - API

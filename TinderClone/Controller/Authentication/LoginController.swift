@@ -67,7 +67,7 @@ class LoginController: UIViewController {
                 print("DEBUG: error signing user in \(error.localizedDescription)")
                 return
             }
-            print("DEBUG: logged user in successfully")
+            self.dismiss(animated: true)
         }
     }
     
