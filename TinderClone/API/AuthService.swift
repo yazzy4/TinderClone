@@ -8,6 +8,9 @@
 import Foundation
 import UIKit
 import Firebase
+import FirebaseFirestore
+import FirebaseCore
+
 
 // handle all auth here
 
@@ -19,6 +22,10 @@ struct AuthCredentials {
 }
 
 struct AuthService {
+    
+    static func logUserIn(withEmail email: String, password: String, completion: @escaping(AuthDataResult?, Error?) -> Void) {
+        Auth.auth().signIn(withEmail: email, password: password, completion: completion)
+    }
     
     static func registerUser(withCredentials credentials: AuthCredentials, completion: @escaping((Error?) -> Void)) {
         
