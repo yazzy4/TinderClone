@@ -79,7 +79,14 @@ class RegistrationController: UIViewController {
         
         let credentials = AuthCredentials(email: email, password: password, fullname: fullname, profileImage: profileImage)
         
-        AuthService.registerUser(withCredentials: credentials)
+        AuthService.registerUser(withCredentials: credentials) { error in
+            if let error = error {
+                print("DEBUG: error signing user up \(error.localizedDescription)")
+                return
+            }
+            
+            print("DEBUG: Successfully registered user")
+        }
     }
     
     @objc func handleShowLogin() {

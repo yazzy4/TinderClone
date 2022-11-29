@@ -20,14 +20,24 @@ struct AuthCredentials {
 
 struct AuthService {
     
-    static func registerUser(withCredentials credentials: AuthCredentials) {
+    static func registerUser(withCredentials credentials: AuthCredentials, completion: @escaping((Error?) -> Void)) {
         
         Service.uploadImage(image: credentials.profileImage) { imageUrl in
-            Auth.auth().createUser(withEmail: credentials.email, password: credentials.password) { (results, error) in
+            Auth.auth().createUser(withEmail: credentials.email, password: credentials.password) { (result, error) in
                 if let error = error {
-                    print("DEBUG: error uploading image \(error.localizedDescription)")
+                    print("DEBUG: error signing user up \(error.localizedDescription)")
                     return
                 }
+                
+                guard let uid  = result?.user.uid else { return }
+                
+                let data = ["email": credentials.email,
+                            "fullname": credentials.fullname,
+                            "imageUrl": imageUrl,
+                            "uid": uid,
+                            "age": 18] as [String: Any]
+                
+                Firestore.firestore().collection("users").document(uid).setData(data, completion: completion) 
             }
         }
     }
