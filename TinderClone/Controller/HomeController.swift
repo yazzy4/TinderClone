@@ -38,7 +38,8 @@ class HomeController: UIViewController {
     func fetchUser() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         Service.fetchUser(withUid: uid) { user in
-            print("DEBUG: did execute completion")
+            // configure user
+            print("DEBUG: User is \(user.name)")
         }
     }
     
