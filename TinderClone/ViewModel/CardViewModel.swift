@@ -27,16 +27,16 @@ class CardViewModel {
     }
     
     func showNextPhoto() {
-        guard imageIndex < user.images.count - 1 else { return }
-        
-        imageIndex += 1
-        self.imageCollection = user.images[imageIndex]
+//        guard imageIndex < user.images.count - 1 else { return }
+//        
+//        imageIndex += 1
+//        self.imageCollection = user.images[imageIndex]
     
     }
     
     func showPreviousPhoto() {
-        guard imageIndex > 0 else { return }
-        imageIndex -= 1
-        self.imageCollection = user.images[imageIndex]
+//        guard imageIndex > 0 else { return }
+//        imageIndex -= 1
+//        self.imageCollection = user.images[imageIndex]
     }
 }
