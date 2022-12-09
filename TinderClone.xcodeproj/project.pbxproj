@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		910DE57029439EB400625D3A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910DE56F29439EB400625D3A /* Constants.swift */; };
 		91619BE228FEFBD600CCB186 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91619BE128FEFBD600CCB186 /* AppDelegate.swift */; };
 		91619BE428FEFBD600CCB186 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91619BE328FEFBD600CCB186 /* SceneDelegate.swift */; };
 		91619BEB28FEFBD900CCB186 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91619BEA28FEFBD900CCB186 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		2E6B71217A3D8D43CC9E4E9A /* Pods-TinderClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderClone.debug.xcconfig"; path = "Target Support Files/Pods-TinderClone/Pods-TinderClone.debug.xcconfig"; sourceTree = "<group>"; };
 		3D1AB06EB8DCB1411D0BFC2C /* Pods_TinderClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinderClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBAB88DE76868B87DCB790E /* Pods-TinderClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderClone.release.xcconfig"; path = "Target Support Files/Pods-TinderClone/Pods-TinderClone.release.xcconfig"; sourceTree = "<group>"; };
+		910DE56F29439EB400625D3A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		91619BDE28FEFBD600CCB186 /* TinderClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinderClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91619BE128FEFBD600CCB186 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91619BE328FEFBD600CCB186 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				9198B1662909B20E00E5EABE /* Extensions.swift */,
 				91E38E2C29141AC7000B4B83 /* CustomTextField.swift */,
 				91E38E2E29141F87000B4B83 /* AuthButton.swift */,
+				910DE56F29439EB400625D3A /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91F5D9D0290085F700A6843F /* CardView.swift in Sources */,
+				910DE57029439EB400625D3A /* Constants.swift in Sources */,
 				91E38E2F29141F87000B4B83 /* AuthButton.swift in Sources */,
 				916B05F3292016E600E882C2 /* AuthenticationViewModel.swift in Sources */,
 				9198B1672909B20E00E5EABE /* Extensions.swift in Sources */,

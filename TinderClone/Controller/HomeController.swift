@@ -29,16 +29,24 @@ class HomeController: UIViewController {
         checkIfUserIsLoggedIn()
         configureCards()
         configureUI()
+        fetchUser()
         //logout()
     }
     
     // MARK: - API
     
+    func fetchUser() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        Service.fetchUser(withUid: uid) { user in
+            print("DEBUG: did execute completion")
+        }
+    }
+    
     func checkIfUserIsLoggedIn() {
         if Auth.auth().currentUser == nil {
             presentLoginController()
         } else {
-            print("DEBUG: user is logged in")
+            
         }
     }
     

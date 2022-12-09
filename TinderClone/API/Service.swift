@@ -13,6 +13,12 @@ import UIKit
 
 struct Service {
     
+    static func fetchUser(withUid uid: String, completion: @escaping(User) -> Void) {
+        COLLECTION_USERS.document(uid).getDocument { snapshot, error in
+            print("DEBUG: snapshot \(snapshot?.data())")
+        }
+    }
+    
     static func uploadImage(image: UIImage, completion: @escaping(String) -> Void) {
         guard let imageData = image.jpegData(compressionQuality: 0.75) else { return }
         let filename = NSUUID().uuidString
