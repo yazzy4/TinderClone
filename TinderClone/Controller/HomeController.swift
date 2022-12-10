@@ -14,6 +14,10 @@ class HomeController: UIViewController {
     private let topStack = HomeNavigationStack()
     private let bottomStack = BottomControlStackView()
     
+    private var viewModels = [CardViewModel]() {
+        didSet { configureCards() }
+    }
+    
     private let deckView: UIView = {
         let view = UIView()
         view.backgroundColor = .systemPink
@@ -27,7 +31,6 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkIfUserIsLoggedIn()
-        configureCards()
         configureUI()
         fetchUsers()
         //logout()
@@ -45,7 +48,13 @@ class HomeController: UIViewController {
     
     func fetchUsers() {
         Service.fetchUsers { users in
-            print("DEBUG: users \(users)")
+            self.viewModels = users.map({ CardViewModel(user: $0) })
+            
+            // aka
+            users.forEach { user in
+                let viewModel = CardViewModel(user: user)
+                self.viewModels.append(viewModel)
+            }
         }
     }
     
