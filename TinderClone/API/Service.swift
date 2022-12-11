@@ -32,8 +32,6 @@ struct Service {
                 users.append(user)
                 
                 if users.count == snapshot?.documents.count {
-                    print("DEBUG: Document count is \(snapshot?.documents.count)")
-                    print("DEBUG: Users array count is \(users.count)")
                     completion(users)
                 }
             })

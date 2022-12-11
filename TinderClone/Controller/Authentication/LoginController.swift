@@ -73,7 +73,6 @@ class LoginController: UIViewController {
     
     @objc func handleShowRegistration() {
         navigationController?.pushViewController(RegistrationController(), animated: true)
-        print("DEBUG: Did segue to registration")
     }
 
     // MARK: - Helpers
